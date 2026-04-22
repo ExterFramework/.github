@@ -7,202 +7,167 @@
 
 ---
 
-## 📖 Tentang / About
+## 📖 Profil Institusional
 
-**ExterFramework** adalah organisasi open-source di GitHub yang menyediakan kumpulan resource/script untuk server **FiveM** berbasis framework **QBCore**. Framework ini dirancang dengan UI modern bergaya **NoPixel 4.0**, menawarkan berbagai fitur lengkap untuk kebutuhan server roleplay (RP) mulai dari HUD, inventory, garage, vehicle shop, hingga sistem dispatch dan dokumen.
+**ExterFramework** merupakan entitas pengembangan perangkat lunak berbasis komunitas yang berfokus pada orkestrasi ekosistem resource **FiveM** untuk framework **QBCore**. Secara konseptual, ExterFramework tidak semata-mata menawarkan kumpulan script, melainkan menyediakan _interoperable module stack_ yang dirancang untuk menyederhanakan integrasi, menjaga koherensi antarmuka, dan meningkatkan determinisme pengalaman roleplay pada skenario produksi server.
 
-Semua repository menggunakan lisensi **GNU General Public License v3.0** dan dikembangkan menggunakan **Lua**, **JavaScript**, **CSS**, dan **HTML**.
-
----
-
-## 🏗️ Arsitektur & Teknologi
-
-| Komponen | Teknologi |
-|----------|-----------|
-| **Backend/Server** | Lua (FiveM Server-side) |
-| **Client-side** | Lua (FiveM Client-side) |
-| **UI/NUI** | HTML, CSS, JavaScript |
-| **Framework** | QBCore |
-| **Gaya UI** | NoPixel 4.0 Inspired |
-| **Lisensi** | GNU GPL v3.0 |
+Dengan pendekatan desain yang terinspirasi ekosistem **NoPixel 4.0**, setiap modul diorientasikan pada tiga aksentuasi utama: **konsistensi visual**, **efisiensi runtime**, dan **skalabilitas operasional**.
 
 ---
 
-## 📦 Daftar Repository (25 Repos)
+## 🏛️ Statement Arsitektural
+
+| Domain | Implementasi |
+|--------|---------------|
+| **Server Runtime** | Lua (FiveM server-side execution model) |
+| **Client Runtime** | Lua (event-driven client pipeline) |
+| **NUI Layer** | HTML, CSS, JavaScript |
+| **Framework Basis** | QBCore |
+| **Design Paradigm** | NoPixel 4.0-inspired modern interface |
+| **License Governance** | GNU GPL v3.0 |
+
+---
+
+## 🌐 Kanal Resmi
+
+- **GitHub Organization**: <https://github.com/ExterFramework>
+- **Website Resmi/Portal Informasi**: <https://exterframeworked.gt.tc>
+- **Lisensi**: <https://www.gnu.org/licenses/gpl-3.0>
+
+> Seluruh komunikasi teknis, pembaruan modular, dan dokumentasi tambahan direkomendasikan merujuk pada kanal resmi di atas agar terhindar dari artefak informasi yang tidak terverifikasi.
+
+---
+
+## 📦 Struktur Repository (25 Modul)
 
 ### 🔧 Core & Library
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-lib**](https://github.com/ExterFramework/exter-lib) | Lua | Library utama QBCore UI (NoPixel 4.0 style) — termasuk notify, progressbar, table info, dan info bar |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-lib**](https://github.com/ExterFramework/exter-lib) | Lua | Lapisan utilitas inti (notify, progressbar, table info, info bar, dan komponen interoperabilitas UI) |
 
 ### 🖥️ UI & HUD
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-hud**](https://github.com/ExterFramework/exter-hud) | CSS | HUD (Head-Up Display) untuk menampilkan info pemain seperti health, armor, hunger, thirst, dll |
-| [**exter-menu**](https://github.com/ExterFramework/exter-menu) | CSS | Sistem menu UI untuk interaksi dalam game |
-| [**exter-radialmenu**](https://github.com/ExterFramework/exter-radialmenu) | Lua | Radial menu (menu lingkaran) untuk akses cepat aksi pemain ⭐1 |
-| [**exter-textui**](https://github.com/ExterFramework/exter-textui) | CSS | Text UI untuk menampilkan teks interaksi di layar |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-hud**](https://github.com/ExterFramework/exter-hud) | CSS | Modul telemetri visual pemain (health, armor, hunger, thirst, dan parameter vital lain) |
+| [**exter-menu**](https://github.com/ExterFramework/exter-menu) | CSS | Sistem menu modular untuk interaksi multi-konteks |
+| [**exter-radialmenu**](https://github.com/ExterFramework/exter-radialmenu) | Lua | Akses aksi cepat berbasis radial command surface |
+| [**exter-textui**](https://github.com/ExterFramework/exter-textui) | CSS | Notifikasi interaksi kontekstual berbasis text overlay |
 
-### 🎒 Inventory & Item
+### 🎒 Inventory & Itemization
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**ox_inventory**](https://github.com/ExterFramework/ox_inventory) | Lua | Sistem inventory (fork/custom dari ox_inventory) |
-| [**exter-shop**](https://github.com/ExterFramework/exter-shop) | Lua | Sistem toko/shop untuk jual beli item dalam game |
-| [**exter-books**](https://github.com/ExterFramework/exter-books) | Lua | Sistem buku dalam game (bisa dibaca pemain) |
-| [**exter-documents**](https://github.com/ExterFramework/exter-documents) | Lua | Sistem dokumen dalam game (ID, SIM, surat, dll) |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**ox_inventory**](https://github.com/ExterFramework/ox_inventory) | Lua | Fork/kustomisasi sistem inventory untuk kebutuhan implementasi spesifik |
+| [**exter-shop**](https://github.com/ExterFramework/exter-shop) | Lua | Infrastruktur transaksi item dan komoditas in-game |
+| [**exter-books**](https://github.com/ExterFramework/exter-books) | Lua | Mekanisme dokumen-baca berbentuk buku interaktif |
+| [**exter-documents**](https://github.com/ExterFramework/exter-documents) | Lua | Sistem dokumen legal/administratif (ID, SIM, dan varian surat lainnya) |
 
-### 🚗 Kendaraan
+### 🚗 Vehicular Ecosystem
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-vehicleshop**](https://github.com/ExterFramework/exter-vehicleshop) | Lua | Showroom/toko kendaraan untuk membeli kendaraan |
-| [**exter-garage**](https://github.com/ExterFramework/exter-garage) | Lua | Sistem garasi untuk menyimpan dan mengambil kendaraan |
-| [**exter-carcontrol**](https://github.com/ExterFramework/exter-carcontrol) | JavaScript | Panel kontrol kendaraan (kunci, lampu, mesin, dll) |
-| [**exter_radar**](https://github.com/ExterFramework/exter_radar) | JavaScript | Radar kecepatan kendaraan (untuk polisi/LEO) |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-vehicleshop**](https://github.com/ExterFramework/exter-vehicleshop) | Lua | Modul showroom dan pembelian kendaraan |
+| [**exter-garage**](https://github.com/ExterFramework/exter-garage) | Lua | Lifecycle penyimpanan, retrieval, dan state kendaraan |
+| [**exter-carcontrol**](https://github.com/ExterFramework/exter-carcontrol) | JavaScript | Kontrol perangkat kendaraan (engine, lock, lights, dsb.) |
+| [**exter_radar**](https://github.com/ExterFramework/exter_radar) | JavaScript | Instrumentasi radar kecepatan untuk kebutuhan law enforcement |
 
-### 👮 Pekerjaan & Roleplay
+### 👮 Roleplay Service Layer
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-dispatch**](https://github.com/ExterFramework/exter-dispatch) | CSS | Sistem dispatch untuk polisi/EMS (panggilan darurat) |
-| [**exter-report**](https://github.com/ExterFramework/exter-report) | Lua | Sistem laporan pemain (report admin) |
-| [**exter-billing**](https://github.com/ExterFramework/exter-billing) | CSS | Sistem tagihan/billing antar pemain atau bisnis |
-| [**exter-moneywash**](https://github.com/ExterFramework/exter-moneywash) | Lua | Sistem pencucian uang (money wash) untuk criminal RP |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-dispatch**](https://github.com/ExterFramework/exter-dispatch) | CSS | Sistem dispatch untuk kanal darurat kepolisian/medis |
+| [**exter-report**](https://github.com/ExterFramework/exter-report) | Lua | Manajemen pelaporan pemain dan eskalasi administratif |
+| [**exter-billing**](https://github.com/ExterFramework/exter-billing) | CSS | Transaksi billing antar entitas pemain/bisnis |
+| [**exter-moneywash**](https://github.com/ExterFramework/exter-moneywash) | Lua | Simulasi ekonomi ilegal untuk skenario criminal RP |
 
-### 🎮 Gameplay & Interaksi
+### 🎮 Gameplay & Interaction Suite
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-racingapp**](https://github.com/ExterFramework/exter-racingapp) | HTML | Aplikasi balapan jalanan (street racing) |
-| [**exter-lockpick**](https://github.com/ExterFramework/exter-lockpick) | JavaScript | Minigame lockpick (membuka kunci) |
-| [**exter-emotemenu**](https://github.com/ExterFramework/exter-emotemenu) | Lua | Menu emote/animasi karakter |
-| [**exter-radio**](https://github.com/ExterFramework/exter-radio) | Lua | Sistem radio komunikasi dalam game |
-| [**exter-chat**](https://github.com/ExterFramework/exter-chat) | Lua | Sistem chat custom dalam game |
-| [**exter-scenes**](https://github.com/ExterFramework/exter-scenes) | CSS | Sistem scene/teks 3D yang bisa ditaruh di dunia game |
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-racingapp**](https://github.com/ExterFramework/exter-racingapp) | HTML | Aplikasi balap jalanan dengan antarmuka kompetitif |
+| [**exter-lockpick**](https://github.com/ExterFramework/exter-lockpick) | JavaScript | Minigame lockpick berbasis interaksi real-time |
+| [**exter-emotemenu**](https://github.com/ExterFramework/exter-emotemenu) | Lua | Orkestrasi emote dan animasi karakter |
+| [**exter-radio**](https://github.com/ExterFramework/exter-radio) | Lua | Komunikasi radio in-game multi-channel |
+| [**exter-chat**](https://github.com/ExterFramework/exter-chat) | Lua | Sistem percakapan custom berorientasi RP |
+| [**exter-scenes**](https://github.com/ExterFramework/exter-scenes) | CSS | Penempatan scene/teks 3D sebagai artefak naratif dunia |
 
-### 💀 Sistem Lainnya
+### 💀 Auxiliary Systems
 
-| Repository | Bahasa | Deskripsi |
-|------------|--------|-----------|
-| [**exter-deathscreen**](https://github.com/ExterFramework/exter-deathscreen) | Lua | Layar kematian (death screen) saat pemain down/mati |
-| [**exter-doorlock**](https://github.com/ExterFramework/exter-doorlock) | Lua | Sistem kunci pintu untuk bangunan/properti |
-
----
-
-## 🗂️ Ringkasan Kategori
-
-```
-ExterFramework (25 Repositories)
-│
-├── 🔧 Core & Library .............. 1 repo
-├── 🖥️ UI & HUD .................... 4 repos
-├── 🎒 Inventory & Item ............ 4 repos
-├── 🚗 Kendaraan ................... 4 repos
-├── 👮 Pekerjaan & Roleplay ........ 4 repos
-├── 🎮 Gameplay & Interaksi ........ 6 repos
-└── 💀 Sistem Lainnya .............. 2 repos
-```
+| Repository | Bahasa | Fokus Fungsional |
+|------------|--------|------------------|
+| [**exter-deathscreen**](https://github.com/ExterFramework/exter-deathscreen) | Lua | Death-state visual handling untuk fase incapacitated |
+| [**exter-doorlock**](https://github.com/ExterFramework/exter-doorlock) | Lua | Kontrol akses properti melalui skema door authorization |
 
 ---
 
-## 📊 Statistik
+## 📊 Telemetri Ringkas
 
 | Metrik | Nilai |
 |--------|-------|
 | **Total Repository** | 25 |
-| **Bahasa Utama** | Lua (15), CSS (6), JavaScript (3), HTML (1) |
-| **Lisensi** | GNU GPL v3.0 (semua repo) |
-| **Terakhir Diperbarui** | April 2026 |
-| **Total Stars** | 1 ⭐ (exter-radialmenu) |
-| **Framework Target** | QBCore (FiveM) |
+| **Distribusi Bahasa** | Lua (15), CSS (6), JavaScript (3), HTML (1) |
+| **Lisensi** | GNU GPL v3.0 |
+| **Basis Framework** | QBCore |
+| **Pembaruan Dokumen** | 22 April 2026 |
 
 ---
 
-## ⚙️ Cara Instalasi (Umum)
+## ⚙️ Protokol Implementasi Dasar
 
-Setiap resource dapat diinstal dengan langkah berikut:
-
-1. **Download/Clone** repository yang diinginkan:
+1. **Kloning modul** yang diperlukan ke direktori resource server:
    ```bash
    cd /path/to/your/fivem-server/resources/
    git clone https://github.com/ExterFramework/[nama-repo].git
    ```
-
-2. **Tambahkan ke server.cfg:**
+2. **Registrasikan modul** pada `server.cfg`:
    ```cfg
    ensure [nama-repo]
    ```
-
-3. **Pastikan dependensi terpenuhi:**
-   - QBCore Framework sudah terinstal
-   - `exter-lib` direkomendasikan sebagai library utama
-   - Baca README masing-masing repo untuk dependensi spesifik
-
-4. **Restart server** atau gunakan command:
-   ```
+3. **Verifikasi dependensi inti**:
+   - QBCore telah terpasang dan aktif.
+   - `exter-lib` direkomendasikan sebagai fondasi utilitas.
+   - Dokumentasi repo masing-masing diutamakan untuk dependensi khusus.
+4. **Muat ulang service**:
+   ```bash
    refresh
    ensure [nama-repo]
    ```
 
 ---
 
-## 📋 Dependensi Umum
+## 📋 Dependensi Referensial
 
-- [**QBCore Framework**](https://github.com/qbcore-framework) — Framework utama yang dibutuhkan
-- [**oxmysql**](https://github.com/overextended/oxmysql) — Database MySQL driver
-- [**ox_lib**](https://github.com/overextended/ox_lib) — Library tambahan (untuk beberapa resource)
-- **exter-lib** — Library UI inti dari ExterFramework
-
----
-
-## 🎨 Gaya Desain
-
-ExterFramework mengadopsi desain UI modern yang terinspirasi dari **NoPixel 4.0**, salah satu server FiveM RP terbesar dan paling populer. Fitur desain meliputi:
-
-- ✅ UI bersih dan modern
-- ✅ Animasi halus (smooth transitions)
-- ✅ Responsif dan ringan
-- ✅ Konsisten antar resource
-- ✅ Dark theme yang nyaman di mata
+- [**QBCore Framework**](https://github.com/qbcore-framework)
+- [**oxmysql**](https://github.com/overextended/oxmysql)
+- [**ox_lib**](https://github.com/overextended/ox_lib)
+- **exter-lib** sebagai utility layer internal ExterFramework
 
 ---
 
-## 🤝 Kontribusi
+## 👥 Credits & Atribusi
 
-Karena semua repository menggunakan lisensi **GPL v3.0**, kamu bebas untuk:
+Pengembangan ExterFramework merupakan hasil kolaborasi komunitas open-source yang melibatkan maintainer, kontributor kode, penguji internal server, serta pengguna akhir yang menyuplai _feedback loop_ berkesinambungan.
 
-- 🔀 Fork dan modifikasi sesuai kebutuhan server
-- 🐛 Melaporkan bug melalui Issues di masing-masing repo
-- 📝 Membuat Pull Request untuk perbaikan atau fitur baru
-- 📢 Membagikan ke komunitas FiveM lainnya (dengan tetap mencantumkan kredit)
+Atribusi utama:
+- Tim inti dan maintainer **ExterFramework**.
+- Komunitas **QBCore** dan ekosistem dependensi pendukung.
+- Kontributor independen melalui _issue tracking_, _pull request_, dan validasi fungsional.
 
----
-
-## 📌 Catatan Penting
-
-> ⚠️ Beberapa repository mungkin bersifat **private** dan tidak dapat diakses publik (seperti `exter-multicharacter`, `exter-clothing`, `exter-spawn`). Hubungi tim ExterFramework untuk informasi lebih lanjut.
-
-> 💡 Framework ini dirancang khusus untuk **QBCore**. Jika kamu menggunakan framework lain (ESX, vRP, dll), diperlukan modifikasi tambahan.
+> Demi menjaga integritas etika open-source, mohon tetap mencantumkan kredit ketika melakukan fork, redistribusi, atau modifikasi publik.
 
 ---
 
-## 🔗 Link Penting
+## 📌 Catatan Operasional
 
-- 🏠 **GitHub Organization**: [github.com/ExterFramework](https://github.com/ExterFramework)
-- 📜 **Lisensi**: [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0)
-
----
-
-## 📝 Kesimpulan
-
-**ExterFramework** adalah kumpulan resource FiveM QBCore yang lengkap dan modern, cocok untuk membangun server roleplay dengan UI bergaya NoPixel 4.0. Dengan 25 repository yang mencakup hampir semua aspek gameplay RP — mulai dari HUD, inventory, kendaraan, pekerjaan, hingga minigame — framework ini menawarkan solusi all-in-one bagi developer server FiveM yang ingin memberikan pengalaman bermain terbaik kepada pemainnya.
+- Sebagian modul dapat bersifat **private/restricted** dan tidak selalu tersedia untuk publik.
+- ExterFramework ditujukan secara primer untuk **QBCore**; penggunaan pada stack lain (mis. ESX/vRP) memerlukan rekayasa adaptif tambahan.
+- Untuk klarifikasi legal, teknis, atau kolaborasi, prioritaskan kanal resmi yang telah dicantumkan.
 
 ---
 
 <p align="center">
-  <i>README ini dibuat sebagai rangkuman analisis dari organisasi GitHub <a href="https://github.com/ExterFramework">ExterFramework</a></i><br>
-  <i>Terakhir diperbarui: April 2026</i>
+  <i>Dokumen ini disusun untuk representasi profesional organisasi ExterFramework.</i><br>
+  <i>Revisi terakhir: 22 April 2026 (UTC)</i>
 </p>
