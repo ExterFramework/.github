@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e676,50:00c853,100:0d1117&height=200&section=header&text=ExterFramework&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Next-Generation%20FiveM%20%26%20Roblox%20Development%20Ecosystem&descAlignY=55&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e676,50:00c853,100:0d1117&height=200&section=header&text=ExterFramework&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Next-Generation%20FiveM%20Development%20Ecosystem&descAlignY=55&descSize=18" width="100%"/>
 
 <br/>
 
@@ -10,12 +10,11 @@
 ![Language](https://img.shields.io/badge/Primary-Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/Frontend-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![FiveM](https://img.shields.io/badge/Platform-FiveM-F40552?style=for-the-badge&logo=fivem&logoColor=white)
-![Roblox](https://img.shields.io/badge/Platform-Roblox-000000?style=for-the-badge&logo=roblox&logoColor=white)
 ![License](https://img.shields.io/badge/License-Open%20Source-00c853?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 
 <br/>
 
-> **⚡ A modular, production-grade framework ecosystem engineered for high-performance game server development.**
+> **⚡ A modular, production-grade framework ecosystem engineered for high-performance FiveM server development.**
 
 🌐 [Website](https://exterframeworked.gt.tc/) • 📦 [Repositories](https://github.com/orgs/ExterFramework/repositories) • 👤 [Creator](https://github.com/SOBING4413)
 
@@ -25,7 +24,7 @@
 
 ## 📖 Overview
 
-**ExterFramework** is a comprehensive, open-source development ecosystem purpose-built for **FiveM** (GTA V multiplayer) and **Roblox** game server environments. The framework provides a complete suite of interconnected modules — from core UI primitives and HUD systems to full-featured gameplay mechanics — designed with a modular architecture that enables server operators to deploy production-ready features with minimal configuration overhead.
+**ExterFramework** is a comprehensive, open-source development ecosystem purpose-built for **FiveM** (GTA V multiplayer) game server environments. The framework provides a complete suite of interconnected modules — from core UI primitives and HUD systems to full-featured gameplay mechanics — designed with a modular architecture that enables server operators to deploy production-ready features with minimal configuration overhead.
 
 Built primarily in **Lua** (server/client game logic) and **TypeScript/React** (NUI web interfaces), ExterFramework follows a consistent design philosophy: each module is self-contained yet interoperable, communicating through a shared library layer (`exter-lib`) that standardizes event handling, state management, and cross-resource communication.
 
@@ -62,24 +61,18 @@ ExterFramework/
 │   ├── exter-admin          # Server administration panel
 │   └── exter-multicharacter # Multi-character selection & management
 │
-├── 🎮 Gameplay Systems
-│   ├── exter-inventory      # Item inventory with drag-and-drop
-│   ├── exter-banking        # Banking system — accounts, transfers, ATM
-│   ├── exter-garage         # Vehicle garage & impound management
-│   ├── exter-vehicleshop    # Vehicle dealership & purchasing
-│   ├── exter-housing        # Property ownership & interior management
-│   ├── exter-clothing       # Character clothing & outfit system
-│   ├── exter-doorlock       # Door lock/unlock & access control
-│   ├── exter-racingapp      # Street racing with leaderboards
-│   └── exter-weathersync    # Dynamic weather & time synchronization
-│
-├── 👮 Job Systems
-│   ├── exter-policejob      # Law enforcement job framework
-│   └── exter-ambulancejob   # EMS/paramedic job framework
-│
-└── 🎯 Roblox Modules
-    ├── GUI                  # Roblox GUI framework (TypeScript)
-    └── [Various Scripts]    # Roblox Lua game scripts & utilities
+└── 🎮 Gameplay Systems
+    ├── exter-inventory      # Item inventory with drag-and-drop
+    ├── exter-banking        # Banking system — accounts, transfers, ATM
+    ├── exter-garage         # Vehicle garage & impound management
+    ├── exter-vehicleshop    # Vehicle dealership & purchasing
+    ├── exter-housing        # Property ownership & interior management
+    ├── exter-clothing       # Character clothing & outfit system
+    ├── exter-doorlock       # Door lock/unlock & access control
+    ├── exter-racingapp      # Street racing with leaderboards
+    ├── exter-weathersync    # Dynamic weather & time synchronization
+    ├── exter-policejob      # Law enforcement job framework
+    └── exter-ambulancejob   # EMS/paramedic job framework
 ```
 
 ---
@@ -90,7 +83,7 @@ ExterFramework/
 
 | Module | Description | Stack |
 |--------|-------------|-------|
-| **exter-lib** | Shared utility library providing the bridge layer, event abstractions, callback system, and common helper functions used across all modules | `Lua` |
+| **exter-lib** | Shared utility library providing the bridge layer, event abstractions, callback system, and common helper functions used across all modules | `Lua` `JS` `HTML` `CSS` |
 | **exter-loading** | Customizable loading screen with progress tracking, asset preloading, and server branding | `HTML` `CSS` `JS` |
 | **exter-spawn** | Spawn selection system with location management, last-position recall, and new-character onboarding flow | `Lua` `NUI` |
 
@@ -107,27 +100,42 @@ ExterFramework/
 | **exter-radial** | Circular/pie menu for quick-access actions with customizable segments and icons | `Lua` `React` `TS` |
 | **exter-target** | 3D world-space interaction system — raycast-based entity/zone targeting with contextual options | `Lua` `React` `TS` |
 
-### Application & Gameplay Modules
+### HUD & Interface Systems
+
+| Module | Description | Stack |
+|--------|-------------|-------|
+| **exter-hud** | Player HUD displaying health, armor, hunger, thirst, stress, and vehicle speedometer (NoPixel 4.0 inspired) | `Lua` `HTML` `CSS` `JS` |
+| **exter-scoreboard** | Server player list with ping, ID, job info, and admin tools | `Lua` `React` `TS` |
+| **exter-chat** | In-game chat with command system, channels, and message formatting | `Lua` `NUI` |
+| **exter-dispatch** | Emergency dispatch system for job alerts, GPS tracking, and response coordination | `Lua` `React` `TS` |
+
+### Application Modules
 
 | Module | Description | Stack |
 |--------|-------------|-------|
 | **exter-phone** | Full-featured smartphone with apps (calls, messages, contacts, camera, settings) | `Lua` `React` `TS` |
 | **exter-laptop** | In-game computer interface with browser and application support | `Lua` `React` `TS` |
+| **exter-admin** | Server administration panel — player management, bans, teleportation, entity spawning | `Lua` `React` `TS` |
+| **exter-multicharacter** | Multi-character slot system with character creation, selection, and deletion | `Lua` `React` `TS` |
+
+### Gameplay Systems
+
+| Module | Description | Stack |
+|--------|-------------|-------|
 | **exter-inventory** | Drag-and-drop inventory system with weight/slot management, item metadata, and crafting hooks | `Lua` `React` `TS` |
 | **exter-banking** | Complete banking system — checking/savings accounts, transfers, transaction history, ATM interface | `Lua` `React` `TS` |
 | **exter-garage** | Vehicle storage, retrieval, and impound management with garage location support | `Lua` `React` `TS` |
 | **exter-vehicleshop** | Vehicle dealership with catalog browsing, test drives, and purchase flow | `Lua` `React` `TS` |
 | **exter-housing** | Property system with ownership, interior decoration, key sharing, and stash storage | `Lua` `React` `TS` |
 | **exter-clothing** | Character customization — outfits, accessories, wardrobe management | `Lua` `React` `TS` |
-| **exter-racingapp** | Street racing system with race creation, checkpoints, leaderboards, and betting | `Lua` `React` `TS` |
-| **exter-admin** | Server administration panel — player management, bans, teleportation, entity spawning | `Lua` `React` `TS` |
-| **exter-multicharacter** | Multi-character slot system with character creation, selection, and deletion | `Lua` `React` `TS` |
-| **exter-dispatch** | Emergency dispatch system for job alerts, GPS tracking, and response coordination | `Lua` `React` `TS` |
 | **exter-doorlock** | Door/gate access control with lockpicking, key items, and job-based permissions | `Lua` `NUI` |
 | **exter-weathersync** | Server-wide weather and time synchronization with admin overrides | `Lua` |
-| **exter-hud** | Player HUD displaying health, armor, hunger, thirst, stress, and vehicle speedometer | `Lua` `React` `TS` |
-| **exter-scoreboard** | Server player list with ping, ID, job info, and admin tools | `Lua` `React` `TS` |
-| **exter-chat** | In-game chat with command system, channels, and message formatting | `Lua` `NUI` |
+| **exter-racingapp** | Street racing system with race creation, checkpoints, leaderboards, and betting | `Lua` `React` `TS` |
+
+### Job Systems
+
+| Module | Description | Stack |
+|--------|-------------|-------|
 | **exter-policejob** | Police job framework — duty toggle, evidence, cuffing, vehicle impound | `Lua` `NUI` |
 | **exter-ambulancejob** | EMS job framework — revive mechanics, stretcher, hospital check-in | `Lua` `NUI` |
 
@@ -139,10 +147,11 @@ ExterFramework/
 
 | Layer | Technologies |
 |-------|-------------|
-| **Game Logic** | ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white) — Server & client-side scripting (FiveM/Roblox) |
+| **Game Logic** | ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white) — Server & client-side scripting for FiveM |
 | **NUI Frontend** | ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
+| **Legacy NUI** | ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
 | **Build Tools** | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white) |
-| **Runtime** | ![FiveM](https://img.shields.io/badge/CFX/FiveM-F40552?style=flat-square) ![Roblox](https://img.shields.io/badge/Roblox_Studio-000000?style=flat-square&logo=roblox&logoColor=white) |
+| **Runtime** | ![FiveM](https://img.shields.io/badge/CFX/FiveM-F40552?style=flat-square) |
 | **Database** | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) / ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white) via oxmysql |
 
 </div>
@@ -248,7 +257,7 @@ Please ensure your code follows the existing style conventions and includes appr
 
 [![GitHub](https://img.shields.io/badge/GitHub-SOBING4413-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SOBING4413)
 
-> Full-stack game developer specializing in FiveM resource development and Roblox scripting. Creator and sole maintainer of the ExterFramework ecosystem with 798+ contributions across 42+ repositories.
+> Full-stack game developer specializing in FiveM resource development. Creator and sole maintainer of the ExterFramework ecosystem with 798+ contributions across 42+ repositories.
 
 </div>
 
