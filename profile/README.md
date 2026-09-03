@@ -1,56 +1,13 @@
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e676,50:00c853,100:0d1117&height=180&section=header&text=ExterFramework&fontSize=64&fontColor=ffffff&fontAlignY=40" width="100%"/>
+</div>
+
 # ExterFramework
 
 ExterFramework is a modular resource ecosystem for FiveM server development. It provides a set of interoperable Lua resources and NUI applications covering core infrastructure, UI primitives, HUD components, in-game applications, and gameplay systems. Resources share a common event and utility layer (`exter-lib`) so that individual modules can be adopted independently or combined into a full server build.
 
 Repositories: https://github.com/orgs/ExterFramework/repositories
 Maintainer: https://github.com/SOBING4413
-
----
-
-## Repository Layout
-
-```
-ExterFramework/
-├── Core Infrastructure
-│   ├── exter-lib             Shared library: event bus, utilities, framework bridge
-│   ├── exter-loading         Client bootstrap and asset loading screen
-│   └── exter-spawn           Character spawn orchestration and session initialization
-│
-├── UI Primitives
-│   ├── exter-notify          Toast notification system
-│   ├── exter-drawtext        On-screen instructional text renderer
-│   ├── exter-progressbar     Asynchronous progress bar with cancellation support
-│   ├── exter-input           Dynamic form input dialogs
-│   ├── exter-menu            Navigable list menu system
-│   ├── exter-context         Context menu interface
-│   ├── exter-radial          Radial menu for quick actions
-│   └── exter-target          World-space interaction and targeting system
-│
-├── HUD and Interface Systems
-│   ├── exter-hud             Player HUD: health, armor, hunger, thirst, speedometer
-│   ├── exter-scoreboard      Player list and scoreboard
-│   ├── exter-chat            In-game chat with command support
-│   └── exter-dispatch        Job alert and dispatch coordination system
-│
-├── Application Modules
-│   ├── exter-phone           In-game smartphone with an application ecosystem
-│   ├── exter-laptop          In-game computer interface
-│   ├── exter-admin           Server administration panel
-│   └── exter-multicharacter  Multi-character slot management
-│
-└── Gameplay Systems
-    ├── exter-inventory       Item inventory with drag-and-drop and metadata support
-    ├── exter-banking         Account management, transfers, and ATM interface
-    ├── exter-garage          Vehicle storage and impound management
-    ├── exter-vehicleshop     Vehicle dealership and purchase flow
-    ├── exter-housing         Property ownership and interior management
-    ├── exter-clothing        Character outfit and wardrobe management
-    ├── exter-doorlock        Access control for doors and gates
-    ├── exter-weathersync     Server-wide weather and time synchronization
-    ├── exter-racingapp       Race creation, checkpoints, and leaderboards
-    ├── exter-policejob       Law enforcement job framework
-    └── exter-ambulancejob    Emergency medical services job framework
-```
 
 ---
 
